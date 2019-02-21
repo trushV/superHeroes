@@ -3,12 +3,14 @@
 use Illuminate\Database\Seeder;
 use Faker\Factory as Faker;
 
+/**
+ * Class ImageSeeder
+ */
 class ImageSeeder extends Seeder
 {
+
     /**
-     * Run the database seeds.
-     *
-     * @return void
+     * @throws Exception
      */
     public function run()
     {
