@@ -1,5 +1,7 @@
 <?php
 
+namespace Repositories\SuperheroRepository\Contracts;
+
 /**
  * Interface SuperheroRepositoryInterface
  */
