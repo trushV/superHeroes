@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Models\SuperheroModel;
+
 use Illuminate\Database\Eloquent\Model;
 
 class Superhero extends Model
