@@ -31,5 +31,5 @@ interface SuperheroRepositoryInterface
     /**
      * @param string $id
      */
-    public function updateSuperheroById($id):void;
+    public function updateSuperheroById(string $id, array $superhero):void;
 }

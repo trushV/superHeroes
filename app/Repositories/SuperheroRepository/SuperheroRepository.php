@@ -2,10 +2,18 @@
 
 namespace App\Repositories\SuperheroRepository;
 
+use App\Models\SuperheroModel\Superhero;
 use App\Repositories\SuperheroRepository\Contracts\SuperheroRepositoryInterface;
 
+/**
+ * Class SuperheroRepository
+ * @package App\Repositories\SuperheroRepository
+ */
 class SuperheroRepository implements SuperheroRepositoryInterface
 {
+    /**
+     * @var Superhero
+     */
     private $superhero;
 
     /**
@@ -18,28 +26,48 @@ class SuperheroRepository implements SuperheroRepositoryInterface
     }
 
 
+    /**
+     * @return Superhero[]|\Illuminate\Database\Eloquent\Collection|mixed
+     */
     public function getAll()
     {
-        // TODO: Implement getAll() method.
+       return $this->superhero->all();
     }
 
+    /**
+     * @param string $id
+     * @return mixed
+     */
     public function findSuperheroById(string $id)
     {
-        // TODO: Implement findSuperheroById() method.
+        return $this->superhero->where('id',$id)->first();
     }
 
+    /**
+     * @param array $superhero
+     */
     public function createSuperhero(array $superhero): void
     {
-        // TODO: Implement createSuperhero() method.
+        $this->superhero->create($superhero);
+
     }
 
+    /**
+     * @param string $id
+     */
     public function destroySuperheroById(string $id): void
     {
-        // TODO: Implement destroySuperheroById() method.
+        $this->superhero->destroy($id);
     }
 
-    public function updateSuperheroById($id): void
+    /**
+     * @param string $id
+     * @param array $data
+     */
+    public function updateSuperheroById(string $id, array $data): void
     {
-        // TODO: Implement updateSuperheroById() method.
+        $superhero = $this->superhero->find($id);
+        $superhero->update($data);
     }
+
 }
