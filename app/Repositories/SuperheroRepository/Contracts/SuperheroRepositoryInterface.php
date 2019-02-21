@@ -1,6 +1,6 @@
 <?php
 
-namespace Repositories\SuperheroRepository\Contracts;
+namespace App\Repositories\SuperheroRepository\Contracts;
 
 /**
  * Interface SuperheroRepositoryInterface

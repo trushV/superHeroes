@@ -1,8 +1,8 @@
 <?php
 
-namespace Repositories\SuperheroRepository;
+namespace App\Repositories\SuperheroRepository;
 
-use Repositories\SuperheroRepository\Contracts\SuperheroRepositoryInterface;
+use App\Repositories\SuperheroRepository\Contracts\SuperheroRepositoryInterface;
 
 class SuperheroRepository implements SuperheroRepositoryInterface
 {
