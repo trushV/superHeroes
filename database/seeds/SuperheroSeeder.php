@@ -19,8 +19,8 @@ class SuperheroSeeder extends Seeder
         $faker = Faker::create('App\Models\SuperheroModel\Superhero');
         for ($i = 1; $i <= 50; $i ++){
             DB::table('superhero')->insert([
-                'nickname' => $faker->word,
-                'real_name' =>$faker->word,
+                'nickname' => ucfirst($faker->word),
+                'real_name' =>ucfirst($faker->word),
                 'origin_description' => $faker->text,
                 'superpowers' => $faker->sentence,
                 'catch_phrase' => $faker->sentence,
