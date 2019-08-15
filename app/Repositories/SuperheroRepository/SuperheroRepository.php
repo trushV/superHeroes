@@ -35,6 +35,16 @@ class SuperheroRepository implements SuperheroRepositoryInterface
     }
 
     /**
+     * @param int $count
+     * @return mixed
+     */
+    public function getPaginate(int $count)
+    {
+        return $this->superhero->paginate($count);;
+    }
+
+
+    /**
      * @param string $id
      * @return mixed
      */

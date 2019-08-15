@@ -1,8 +1,11 @@
 <?php
 
+namespace database\seeds;
 
+use DateTime;
 use Illuminate\Database\Seeder;
 use Faker\Factory as Faker;
+use Illuminate\Support\Facades\DB;
 
 /**
  * Class SuperheroSeeder
@@ -12,6 +15,7 @@ class SuperheroSeeder extends Seeder
 
     /**
      * @throws Exception
+     * @throws \Exception
      */
     public function run()
     {

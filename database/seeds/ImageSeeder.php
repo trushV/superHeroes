@@ -1,7 +1,11 @@
 <?php
 
+namespace database\seeds;
+
+use DateTime;
 use Illuminate\Database\Seeder;
 use Faker\Factory as Faker;
+use Illuminate\Support\Facades\DB;
 
 /**
  * Class ImageSeeder
@@ -10,7 +14,7 @@ class ImageSeeder extends Seeder
 {
 
     /**
-     * @throws Exception
+     * @throws \Exception
      */
     public function run()
     {
@@ -19,7 +23,7 @@ class ImageSeeder extends Seeder
         for ($i = 1; $i <= 50; $i ++){
             DB::table('images')->insert([
                 'superhero_id' => $faker->numberBetween(1,50),
-                'path' =>asset('public/images').'/'.$faker->numberBetween(1,10).'jpg',
+                'path' =>asset('images').'/'.$faker->numberBetween(1,10).'.jpg',
                 'created_at'    => $date,
                 'updated_at'    => $date
             ]);

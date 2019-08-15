@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use database\seeds\SuperheroSeeder;
+use database\seeds\ImageSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,7 +15,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             SuperheroSeeder::class,
-            ImageSeeder::class
+            ImageSeeder::class,
         ]);
     }
 }
