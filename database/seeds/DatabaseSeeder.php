@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use database\seeds\SuperheroSeeder;
+use database\seeds\ImageSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -11,6 +13,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        $this->call([
+            SuperheroSeeder::class,
+            ImageSeeder::class,
+        ]);
     }
 }
