@@ -39,9 +39,9 @@ class ImageRepository implements ImageRepositoryInterface
     /**
      * @param array $superhero
      */
-    public function createImage(array $superhero): void
+    public function createImage(array $image): void
     {
-        $this->images->create($superhero);
+        $this->images->create($image);
 
     }
 
@@ -51,6 +51,15 @@ class ImageRepository implements ImageRepositoryInterface
     public function destroyImageById(string $id): void
     {
         $this->images->destroy($id);
+    }
+
+    public function destroyImageBySuperheroId(string $id): void
+    {
+        $deleteImage = $this->images->where('superhero_id',$id);
+        foreach ($deleteImage as $item)
+        {
+            $item->delete();
+        }
     }
 
     /**
@@ -63,4 +72,9 @@ class ImageRepository implements ImageRepositoryInterface
         $images->update($data);
     }
 
+
+    public function getImagesBySuperheroId($heroId)
+    {
+        return $this->images->where('superhero_id',$heroId)->get();
+    }
 }

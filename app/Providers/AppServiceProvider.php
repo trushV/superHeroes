@@ -6,6 +6,8 @@ use App\Repositories\ImagesRepository\Contracts\ImageRepositoryInterface;
 use App\Repositories\ImagesRepository\ImageRepository;
 use App\Repositories\SuperheroRepository\Contracts\SuperheroRepositoryInterface;
 use App\Repositories\SuperheroRepository\SuperheroRepository;
+use App\Services\FileServices\Contract\FileServicesInterface;
+use App\Services\FileServices\FileServices;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -29,5 +31,6 @@ class AppServiceProvider extends ServiceProvider
     {
         $this->app->bind(ImageRepositoryInterface::class, ImageRepository::class);
         $this->app->bind(SuperheroRepositoryInterface::class, SuperheroRepository::class);
+        $this->app->bind(FileServicesInterface::class,FileServices::class);
     }
 }

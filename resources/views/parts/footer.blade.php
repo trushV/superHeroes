@@ -1,6 +1,6 @@
 
         <footer id="footer">
-            <div class="container">
+            <div class="footer-container">
                 <p class="float-right">
                     <a href="#">Back to top</a>
                 </p>

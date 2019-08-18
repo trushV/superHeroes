@@ -23,7 +23,7 @@ class ImageSeeder extends Seeder
         for ($i = 1; $i <= 50; $i ++){
             DB::table('images')->insert([
                 'superhero_id' => $faker->numberBetween(1,50),
-                'path' =>asset('images').'/'.$faker->numberBetween(1,10).'.jpg',
+                'path' =>'images/'.$faker->numberBetween(1,10).'.jpg',
                 'created_at'    => $date,
                 'updated_at'    => $date
             ]);

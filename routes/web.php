@@ -12,4 +12,4 @@
 */
 
 Route::get('/', 'HomeController@index');
-Route::resource('superHero','SuperHeroController');
+Route::resource('superhero','SuperHeroController');

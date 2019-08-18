@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Repositories\SuperheroRepository\SuperheroRepository;
+use App\Repositories\SuperheroRepository\Contracts\SuperheroRepositoryInterface;
 
 class HomeController extends Controller
 {
@@ -10,9 +10,9 @@ class HomeController extends Controller
 
     /**
      * HomeController constructor.
-     * @param $superHeroes
+     * @param SuperheroRepositoryInterface $superHeroesRepository
      */
-    public function __construct(SuperheroRepository $superHeroesRepository)
+    public function __construct(SuperheroRepositoryInterface $superHeroesRepository)
     {
         $this->superHeroesRepository = $superHeroesRepository;
     }

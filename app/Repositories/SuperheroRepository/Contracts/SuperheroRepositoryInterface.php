@@ -20,8 +20,9 @@ interface SuperheroRepositoryInterface
 
     /**
      * @param array $superhero
+     * @return string
      */
-    public function createSuperhero(array $superhero):void;
+    public function createSuperhero(array $superhero):string;
 
     /**
      * @param string $id

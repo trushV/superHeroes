@@ -55,11 +55,12 @@ class SuperheroRepository implements SuperheroRepositoryInterface
 
     /**
      * @param array $superhero
+     * @return string
      */
-    public function createSuperhero(array $superhero): void
+    public function createSuperhero(array $superhero): string
     {
-        $this->superhero->create($superhero);
-
+        $hero = $this->superhero->create($superhero);
+        return $hero->id;
     }
 
     /**
@@ -79,5 +80,6 @@ class SuperheroRepository implements SuperheroRepositoryInterface
         $superhero = $this->superhero->find($id);
         $superhero->update($data);
     }
+
 
 }
